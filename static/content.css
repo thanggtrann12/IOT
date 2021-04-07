@@ -30,7 +30,7 @@
 .card-image 
 {
     grid-area: image;
-    background: url();
+    background: url(/IOT/pictures/0z2wcugj02421.png);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
