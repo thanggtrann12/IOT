@@ -24,23 +24,47 @@
       <h2>LOGIN</h2>
       
       <label>User Name</label>
-      <input type="text" name="uname" placeholder="User Name"><br>
+      <input type="text" name="uname" id="username" placeholder="User Name"><br>
 
       <label>User Name</label>
-      <input type="password" name="password" placeholder="Password" id="psw"><br>
+      <input type="password" name="password" placeholder="Password" id="password"><br>
 
-      <button type="submit">Login</button>
+      <button type="submit" onclick="login()">Login</button>
     
     
     <script>
-      var input=document.getElementById("psw");
+      var input=document.getElementById("password");
       input.addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
          event.preventDefault();
          document.getElementById("Enter").click();
         }
       });
-      </script>
+        </script>
+        <script>
+          var user = ['thanggtrann12'];
+            var pass = ['0393807319'];
+              function login()
+                  {
+                  for (var i = 0; i<user.length;i++)
+                  if (user[i] == document.getElementById("username").value && pass[i] == document.getElementById("password").value) 
+                   {
+                    window.location.href = "/IOT/templates/sidebar.html";
+                   }
+                 else 
+                  {
+                   alert("Your account incorrect");                      
+                  }
+            }
+            function signup()
+            {
+                user.push(document.getElementById("username").value);
+                pass.push(document.getElementById("password").value);
+                console.log(user);
+                console.log(pass);
+            }
+
+        </script>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
