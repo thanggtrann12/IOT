@@ -204,7 +204,7 @@ input[type="submit"] {
 .login input[type="submit"]:hover {
   background-color: var(--loginSubmitHoverBackgroundColor);
 }
-.loginbtn{
+.btn{
   border: 50%;
   padding: 1rem;
   background-color: #2DBF9C;
