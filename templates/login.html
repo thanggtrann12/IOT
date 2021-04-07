@@ -27,7 +27,7 @@
       </div>
 
       <div class="form__field">
-        <button  style="color: aquamarine; padding: 1rem; border: 40%; position: relative; align-items: center;" onclick="login()">Đăng Nhập</button>
+        <button type="button" style="color: aquamarine; padding: 1rem; border: 40%; position: relative; align-items: center;" onclick="login()">Đăng Nhập</button>
       </div>
 
     </form>
@@ -67,8 +67,7 @@
                 if (user[i] == document.getElementById("username").value && pass[i] == document.getElementById("password").value) 
                  {
                   window.location.href = "/IOT/templates/sidebar.html";
-                  console.log(user);
-                  console.log(pass);
+                  
                  }
                else 
                 {
@@ -79,8 +78,7 @@
           {
               user.push(document.getElementById("username").value);
               pass.push(document.getElementById("password").value);
-              console.log(user);
-              console.log(pass);
+             
           }
 
       </script>
