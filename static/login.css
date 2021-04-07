@@ -139,6 +139,7 @@ input[type="submit"] {
 }
 
 .form__input {
+  border: 50%;
   flex: 1;
 }
 
@@ -160,6 +161,7 @@ input[type="submit"] {
 
 .login {
   color: var(--loginColor);
+
 }
 
 .login label,
