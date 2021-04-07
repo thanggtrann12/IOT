@@ -39,11 +39,7 @@
 :root {
   --iconFill: var(--baseColor);
 }
-.btn:hover{
-  border: 50%;
-  padding: 1rem;
-  background-color: #2DBF9C;
-}
+
 .icons {
   display: none;
 }
