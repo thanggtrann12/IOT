@@ -83,7 +83,7 @@
                             <div class="type">AH</div>
                         </div>
                         <div class="stat">
-                            <div class="value" id="bright2">%B%</div>
+                            <div class="value" id="brightness2">%B%</div>
                             <div class="type">Candela</div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
                             <div class="type">AH</div>
                         </div>
                         <div class="stat">
-                            <div class="value" id="bright3">%B%</div>
+                            <div class="value" id="brightness3">%B%</div>
                             <div class="type">Candela</div>
                         </div>
                     </div>
@@ -152,7 +152,27 @@
             dbRef2.on('value', snap => huminity.innerText = snap.val());
             dbRef3.on('value', snap => temparute.innerText = snap.val());
            
-           
+           //farm 2
+            var brightnes2 = document.getElementById('brightness2');
+            var dbRef11 = firebase.database().ref().child('IOTPrimary/Trang Trại/Cường Độ Sáng');
+            var huminity2 = document.getElementById('hum2');
+            var dbRef22 = firebase.database().ref().child('IOTPrimary/Trang Trại/Độ Ẩm');
+            var temparute2 = document.getElementById('temp2');
+            var dbRef33 = firebase.database().ref().child('IOTPrimary/Trang Trại/Nhiệt Độ');
+            dbRef11.on('value', snap => brightnes2.innerText = snap.val());
+            dbRef22.on('value', snap => huminity2.innerText = snap.val());
+            dbRef33.on('value', snap => temparute2.innerText = snap.val());
+
+            //farm 3
+            var brightnes3 = document.getElementById('brightness3');
+            var dbRef111 = firebase.database().ref().child('IOTPrimary/Trang Trại/Cường Độ Sáng');
+            var huminity3 = document.getElementById('hum3');
+            var dbRef222 = firebase.database().ref().child('IOTPrimary/Trang Trại/Độ Ẩm');
+            var temparute3 = document.getElementById('temp3');
+            var dbRef333 = firebase.database().ref().child('IOTPrimary/Trang Trại/Nhiệt Độ');
+            dbRef111.on('value', snap => brightnes3.innerText = snap.val());
+            dbRef222.on('value', snap => huminity3.innerText = snap.val());
+            dbRef333.on('value', snap => temparute3.innerText = snap.val());
           </script>
 </body>
 </html>
