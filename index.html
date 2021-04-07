@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/IOT/static/login.css">
+  <link rel="stylesheet" href="/IOT/static/login.css">k
   <title>Đăng nhập</title>
 </head>
 <body class="align">
@@ -27,7 +27,7 @@
       </div>
 
       <div class="form__field">
-        <button onclick="login()" style="color: aquamarine; padding: 1rem; border: 40%; position: relative; align-items: center;">Đăng Nhập</button>
+        <button  style="color: aquamarine; padding: 1rem; border: 40%; position: relative; align-items: center;" onclick="login()">Đăng Nhập</button>
       </div>
 
     </form>
@@ -67,7 +67,8 @@
                 if (user[i] == document.getElementById("username").value && pass[i] == document.getElementById("password").value) 
                  {
                   window.location.href = "/IOT/templates/sidebar.html";
-                  alert("ssss");
+                  console.log(user);
+                  console.log(pass);
                  }
                else 
                 {
