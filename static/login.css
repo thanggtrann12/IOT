@@ -221,8 +221,7 @@ p {
 }
 .icon-login
 {
-  border-radius: 15px;
-  background: url(/IOT/pictures/logo.png);
+    background: url(/IOT/pictures/logo.png);
   transition: .5s ease;
 }
 .icon-login:hover
