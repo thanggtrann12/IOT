@@ -142,13 +142,13 @@
             
             //functions
             // make sure that the name in ' ' match with name of your database child
-            var brightness = document.getElementById('bright');
+            var brightnes = document.getElementById('bright');
             var dbRef = firebase.database().ref().child('IOTPrimary/Trang Trại/Cường Độ Sáng');
             var huminity = document.getElementById('hum');
             var dbRef2 = firebase.database().ref().child('IOTPrimary/Trang Trại/Độ Ẩm');
             var temparute = document.getElementById('temp');
             var dbRef3 = firebase.database().ref().child('IOTPrimary/Trang Trại/Nhiệt Độ');
-            dbRef.on('value', snap => brightness.innerText = snap.val());
+            dbRef.on('value', snap => brightnes.innerText = snap.val());
             dbRef2.on('value', snap => huminity.innerText = snap.val());
             dbRef3.on('value', snap => temparute.innerText = snap.val());
            
