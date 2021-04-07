@@ -20,28 +20,20 @@
   </div>
 
   <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username"id="uname" required>
+    <form action="login.php" method="post">
+      <h2>LOGIN</h2>
+      <?php if (isset($_GET['error'])) { ?>
+        <p class="error"><?php echo $_GET['error']; ?></p>
+      <?php } ?>
+      <label>User Name</label>
+      <input type="text" name="uname" placeholder="User Name"><br>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" id="psw" required>
+      <label>User Name</label>
+      <input type="password" name="password" placeholder="Password" id="psw"><br>
 
-    <button type="submit"onclick="check()">Login</button>
-    <script>
-      function check()
-      {   
-            
-           var x=document.getElementById("uname").value;
-           var y=document.getElementById("psw").value;
-           if((x=="thanggtrann")&&(y="123456789"))
-           {
-          
-            window.location.href = "/IOT/templates/sidebar.html";
-           }
-      }
-     
-      
-  </script>
+      <button type="submit">Login</button>
+    </form>
+    
     <script>
       var input=document.getElementById("psw");
       input.addEventListener("keyup", function(event) {
