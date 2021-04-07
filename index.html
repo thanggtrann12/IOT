@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+   <link rel="stylesheet" type="text/css" href="/static/login.css">
+      <link rel="stylesheet" type="text/css" href="/static/content.css">
+         <link rel="stylesheet" type="text/css" href="/static/style-sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <script>
+        function goBack() {
+          window.history.back();
+        }
+       
+    </script>
+<link rel="stylesheet" type="text/css" href="login.css" >
+<div class="imgcontainer">
+    <img src="../pictures/164565749_904073400393592_2799989956872052050_n.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username"id="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="psw" required>
+
+    <button type="submit"onclick="check()">Login</button>
+    <script>
+      function check()
+      {   
+            
+           var x=document.getElementById("uname").value;
+           var y=document.getElementById("psw").value;
+           if((x=="thanggtrann")&&(y="123456789"))
+           {
+          
+            window.location.href = "sidebar.html";
+           }
+      }
+     
+      
+  </script>
+    <script>
+      var input=document.getElementById("psw");
+      input.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+         event.preventDefault();
+         document.getElementById("Enter").click();
+        }
+      });
+      </script>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button onclick="goBack()">Cancel</button>
+    
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+</body>
+</html>
