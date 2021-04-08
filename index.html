@@ -49,6 +49,22 @@
       <path d="M1600 1405q0 120-73 189.5t-194 69.5H459q-121 0-194-69.5T192 1405q0-53 3.5-103.5t14-109T236 1084t43-97.5 62-81 85.5-53.5T538 832q9 0 42 21.5t74.5 48 108 48T896 971t133.5-21.5 108-48 74.5-48 42-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zm-320-893q0 159-112.5 271.5T896 896 624.5 783.5 512 512t112.5-271.5T896 128t271.5 112.5T1280 512z" />
     </symbol>
   </svg>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyA3k1fnRpoxpTgazwrg245N5riPc7nj6Sw",
+            authDomain: "iot-primary.firebaseapp.com",
+            databaseURL: "https://iot-primary-default-rtdb.firebaseio.com",
+            projectId: "iot-primary",
+            storageBucket: "iot-primary.appspot.com",
+            messagingSenderId: "527853565604",
+            appId: "1:527853565604:web:9e8c3024bd00305be01831",
+            measurementId: "G-S2GXXQB13J"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="/IOT/json/account.js"></script>
   <script>
     var input=document.getElementById("password");
     input.addEventListener("keyup", function(event) {
@@ -58,29 +74,6 @@
       }
     });
       </script>
-      <script>
-        var user = ['thanggtrann12'];
-          var pass = ['0393807319'];
-            function login()
-                {
-                for (var i = 0; i<user.length;i++)
-                if (user[i] == document.getElementById("username").value && pass[i] == document.getElementById("password").value) 
-                 {
-                  window.location.href = "/IOT/templates/sidebar.html";
-                
-                 }
-               else 
-                {
-                 alert("Your account incorrect");                      
-                }
-          }
-          function signup()
-          {
-              user.push(document.getElementById("username").value);
-              pass.push(document.getElementById("password").value);
-             
-          }
-
-      </script>
+  
 </body>
 </html>
