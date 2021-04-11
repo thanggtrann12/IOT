@@ -2,9 +2,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
   
-      document.getElementById("username").style.display = "block";
-      document.getElementById("password").style.display = "none";
-  
+     
       var user = firebase.auth().currentUser;
   
       if(user != null){
@@ -16,7 +14,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     } else {
       // No user is signed in.
   
-      
+      document.getElementById("username").style.display = "block";
       document.getElementById("password").style.display = "block";
   
     }
