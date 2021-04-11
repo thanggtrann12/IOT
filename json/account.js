@@ -9,8 +9,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   
       if(user != null){
   
-        var email_id = user.email;
-        document.getElementById("usernamefield").innerHTML = "Welcome User : " + email_id;
+        
         window.location.href="/IOT/templates/sidebar.html";
       }
   
