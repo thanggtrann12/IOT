@@ -4,7 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body
+{
+  background-image: url(../pictures/login-bg.jpg);
+}
 body,
 input {
   font-family: sans-serif;
