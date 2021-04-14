@@ -11,70 +11,20 @@
     <title>Đăng kí & Đăng nhập</title>
   </head>
   <body>
-    <div class="container">
-      <div class="forms-container">
-        <div class="signin-signup">
-          <form class="sign-in-form">
-            <h2 class="title">Đăng nhập</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" id="username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input
-                type="password"
-                placeholder="Password"
-                id="password"
-              />
-            </div>
-            <button class="btn solid" onclick="login()">Đăng nhập</button>
-           
-            </div>
-          </form>
-          <form class="sign-up-form">
-            <h2 class="title">Đăng kí</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" id="user_sp/>
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" id="email_field" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input
-                type="password"
-                placeholder="Password"
-                id="password_sp"
-              />
-            </div>
-            <button class="btn" onclick="signup()">Đăng kí</button>
-          
-          </form>
-        </div>
-      </div>
-    
-    </div>
+    <form class="log-in">
+      <h1 class="title">Smart Farm</h1>
+      <input id="username" class="input" type="text" autofocus placeholder="Email" />
+      <input id="password" class="input" type="password" placeholder="Password" />
+      <button class="input submit" type="submit" onclick="login()">Đăng nhập</button>
+      <a href="#" class="forgot">Quên mật khẩu?</a>
+    </form>
+    <button class="sign-up">Đăng kí ngay</button>
 
     <script src="app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyA3k1fnRpoxpTgazwrg245N5riPc7nj6Sw",
-        authDomain: "iot-primary.firebaseapp.com",
-        databaseURL: "https://iot-primary-default-rtdb.firebaseio.com",
-        projectId: "iot-primary",
-        storageBucket: "iot-primary.appspot.com",
-        messagingSenderId: "527853565604",
-        appId: "1:527853565604:web:9e8c3024bd00305be01831",
-        measurementId: "G-S2GXXQB13J",
-      };
-      firebase.initializeApp(config);
-    </script>
-    <script src="/IOT/json/account.js"></script>
+   
+   
+  
+   
     <script>
       var user = ['thanggtrann12'];
           var pass = ['0393807319'];
@@ -93,8 +43,8 @@
           }
           function signup()
           {
-              user.push(document.getElementById("username").value);
-              pass.push(document.getElementById("password").value);
+              user.push(document.getElementById("username_sp").value);
+              pass.push(document.getElementById("password_sp").value);
              
           }
     </script>
