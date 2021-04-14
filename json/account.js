@@ -7,7 +7,7 @@ var pass = ['0393807319'];
                  {
                   console.log("in coming");
                   alert("Your account correct"); 
-                  return res.redirect('https://thanggtrann12.github.io/IOT/templates/sidebar.html');
+                    window.location.href = "https://thanggtrann12.github.io/IOT/templates/sidebar.html";
                 }
                else 
                 {
