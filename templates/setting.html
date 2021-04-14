@@ -293,15 +293,11 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
       function toggleCheckbox(element) {
-        var xhr = new XMLHttpRequest();
+       
         if (element.checked) {
-          xhr.open("GET", "/setting?output=" + element.id + "&state=1", true);
-          console.log("send ok");
-        } else {
-          xhr.open("GET", "/setting?output=" + element.id + "&state=0", true);
-          console.log("send failed");
-        }
-        xhr.send();
+          firebase.database().ref("Device : " + element.id).set({'on'});
+         else firebase.database().ref("Device : " + element.id).set({'off'});
+         
       }
       function updateSliderPWM(element) {
         var sliderValue = document.getElementById("pwmSlider").value;
