@@ -19,21 +19,7 @@
       <button class="input submit" type="submit" onclick="signup()">Đăng kí</button>
     </form>
    
-    <script>
-      var user = ['thanggtrann12'];
-          var pass = ['0393807319'];
-          function signup()
-          {
-              user.push(document.getElementById("username_sp").value);
-              if (document.getElementById("password_sp").value==document.getElementById("password_cf").value)
-              {
-              pass.push(document.getElementById("password_sp").value);
-              window.location.href = "/IOT/templates/sidebar.html";
-              }
-              else alert("Password donot match");
-              window.location.href = "/IOT/templates/signup.html";
-             
-          }
-    </script>
+    
+    <script src="/IOT/json/account.js"></script>
   </body>
 </html>
