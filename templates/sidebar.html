@@ -141,11 +141,11 @@
             firebase.analytics();
             
             //---------------------------------------------------//
-            function writeUserData() {
-                    firebase.database().ref('slidervalue/'+dbRef).set({
+            var sliervalue;
+            firebase.database().ref('value/' + '15').set({
+                sliervalue: '333'
+            });
 
-                    });
-                    }
 
 
 
@@ -160,7 +160,7 @@
             dbRef.on('value', snap => brightnes.innerText = snap.val());
             dbRef2.on('value', snap => huminity.innerText = snap.val());
             dbRef3.on('value', snap => temparute.innerText = snap.val());
-            writeUserData();
+           
            //farm 2
             var brightnes2 = document.getElementById('brightness2');
             var dbRef11 = firebase.database().ref().child('IOTPrimary/Trang Trại/Cường Độ Sáng');
