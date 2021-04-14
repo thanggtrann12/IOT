@@ -16,8 +16,8 @@ function login() {
 function signup() {
 
     if (document.getElementById("password_sp").value == document.getElementById("password_cf").value) {
-        user.push(document.getElementById("username_sp").value);
-        pass.push(document.getElementById("password_sp").value);
+        user[length+1]=document.getElementById("username_sp").value;
+        pass[length+1]=document.getElementById("password_sp").value;
         console.log("ok");
         window.location.pathname = "/IOT/index.html";
     }
