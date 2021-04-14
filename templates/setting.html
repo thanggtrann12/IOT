@@ -165,9 +165,10 @@ function updateSliderPWM3(element) {
   var sliderValue3 = document.getElementById("pwmSlider3").value;
   document.getElementById("textSliderValue3").innerHTML = sliderValue3;
   console.log(sliderValue3);
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/IOT/templates/setting.html//slider3?value="+sliderValue3, true);
-  xhr.send();
+  var req = new XMLHttpRequest();
+  req.open("GET", "http://127.0.0.1:5501/templates/setting.html", false);
+  req.setRequestHeader("Content-Type", "text/html");
+  req.send("slider?value="+sliderValue3);
 }
 </script>
 <footer> 
