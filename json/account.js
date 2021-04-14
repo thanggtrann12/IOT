@@ -5,7 +5,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("user_div").style.display = "block";
     document.getElementById("login_div").style.display = "none";
     window.location.href="/IOT/templates/sidebar.html"
-    function login()
     window.location.assign="/IOT/templates/sidebar.html"
     var user = firebase.auth().currentUser;
 
