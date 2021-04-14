@@ -1,5 +1,5 @@
 var user = ['thanggtrann12'];
-var pass = ['0393807319'];
+var pass = ['1'];
             function login()
                 {
                 for (var i = 0; i<user.length;i++)
