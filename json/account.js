@@ -10,7 +10,7 @@ var pass = ['0393807319'];
                 }
                else 
                 {
-                 alert("Your account incorrect");            
+                 alert("Sai acc");            
                 }
           }
          
