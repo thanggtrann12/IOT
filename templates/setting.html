@@ -285,10 +285,10 @@
       function toggleCheckbox(element) {
        var state;
         if (element.checked) {
-          firebase.database().ref("Device : " + element.id.toString).set({state: 'On'});
+          firebase.database().ref("Device : " + (element.id).toString()).set({state: 'On'});
         }
          else 
-         firebase.database().ref("Device : " + element.id.toString).set({
+         firebase.database().ref("Device : " + (element.id).toString()).set({
             state: 'Off'});
          
       }
