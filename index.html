@@ -14,29 +14,12 @@
   <body>
     <form class="log-in">
       <h1 class="title">Smart Farm</h1>
-      <input id="username" class="input" type="text" autofocus placeholder="username" />
-      <input id="password" class="input" type="password" placeholder="password" />
+      <input id="username" class="input" type="text" autofocus placeholder="Email" />
+      <input id="password" class="input" type="password" placeholder="Password" />
       <button class="input submit"  onclick="login()">Đăng nhập</button>
       <a href="#" class="forgot">Quên mật khẩu?</a>
     </form>
     <button class="sign-up" href="/IOT/templates/signup.html">Đăng kí ngay</button>
-    <script>
-      var user = ['thanggtrann12'];
-          var pass = ['0393807319'];
-            function login()
-                {
-                for (var i = 0; i<user.length;i++)
-                if (user[i] == document.getElementById("username").value && pass[i] == document.getElementById("password").value) 
-                 {
-                  console.log("in coming");
-           
-                  window.location.href = "/IOT/templates/sidebar.html";
-                 }
-               else 
-                {
-                 alert("Your account incorrect");                      
-                }
-          }
-  </script>
+ <script src="/IOT/json/account.js"></script>
   </body>
 </html>
