@@ -23,7 +23,7 @@ var pass = ['0393807319'];
               user.push(document.getElementById("username_sp").value);
               pass.push(document.getElementById("password_sp").value);
               console.log("ok");
-              window.location.href = "https://thanggtrann12.github.io/";
+              window.location.href = "/IOT/templates/index.html";
               }
               else alert("Password donot match");
               window.location.href = "/IOT/templates/signup.html";
