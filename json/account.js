@@ -1,5 +1,5 @@
-var user = ['thanggtrann12'];
-var pass = ['1'];
+ user = ['thanggtrann12'];
+ pass = ['1'];
 function login() {
     for (var i = 0; i < user.length; i++)
         if (user[i] == document.getElementById("username").value && pass[i] == document.getElementById("password").value) 
