@@ -22,6 +22,7 @@ var pass = ['0393807319'];
               {
               user.push(document.getElementById("username_sp").value);
               pass.push(document.getElementById("password_sp").value);
+              console.log(document.getElementById("password_sp").value);
               console.log("ok");
               window.location.replace = "/IOT/index.html";
               }
