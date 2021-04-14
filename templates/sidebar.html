@@ -1,184 +1,219 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/IOT/static/style-sidebar.css">
-    <link rel="stylesheet" href="/IOT/static/content.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/IOT/static/style-sidebar.css" />
+    <link rel="stylesheet" href="/IOT/static/content.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
     <title>Trang chủ</title>
-</head>
-<body>
-    <input type="checkbox" id="check">
+  </head>
+  <body>
+    <input type="checkbox" id="check" />
     <header>
-        <label for="check">
-            <i class="fas fa-bars" id="sidebar-btn"></i></a>
-        </label>
-        <div class="left">
-            <h2>Xin chào <span>Thắng Trần!</span></h2>
-        </div>
-        <div class="right">
-            <a href="/IOT/index.html" class="logout_btn">Đăng Xuất</a>
-        </div>
+      <label for="check">
+        <a><i class="fas fa-bars" id="sidebar-btn"></i></a>
+      </label>
+      <div class="left">
+        <h2>Xin chào <span>Thắng Trần!</span></h2>
+      </div>
+      <div class="right">
+        <a href="/IOT/index.html" class="logout_btn">Đăng Xuất</a>
+      </div>
     </header>
-        <div class="sidebar">
-            <center>
-                <div class="container">
-                    <img class="profile-image" src="/IOT/pictures/cartoon.png" alt="User's Picture">
-                    <div class="user-name">
-                        <h4>Thắng Trần</h4>
-                    </div>
-                </div>
-            </center>
-            <div class="icon">
-                <a id="icon-active" href="#"><i class="fas fa-home"></i><span>Trang chủ</span></a> 
-                <a href="#"><i class="fas fa-user"></i><span>Người dùng</span></a>
-                <a href="/IOT/templates/setting.html"><i class="fas fa-sliders-h"></i><span>Cài đặt</span></a> 
-            </div>
+    <div class="sidebar">
+      <center>
+        <div class="container">
+          <img
+            class="profile-image"
+            src="/IOT/pictures/cartoon.png"
+            alt="User's Picture"
+          />
+          <div class="user-name">
+            <h4>Thắng Trần</h4>
+          </div>
         </div>
-    <div class="content" >
-        <div class="all-card">
-            <a href="../templates/farm.html">
-                <div class="card">
-                    <div class="card-image"></div>
-                    <div class="card-text">
-                        <span class="date"></span>
-                        <h2>Nông trại 1</h2>
-                        <p>Các thông số của nông trại 1 sẽ hiển thị ở đây.</p>
-                    </div>
-                    <div class="card-stats">
-                        <div class="stat">
-                            <div class="value" id="temp">%T%</div>
-                            <div class="type">°C</div>
-                        </div>
-                        <div class="stat border">
-                            <div class="value" id="hum">%H%</div>
-                            <div class="type">Độ ẩm</div>
-                        </div>
-                        <div class="stat">
-                            <div class="value" id="brightness">%B%</div>
-                            <div class="type">Độ sáng</div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="/IOT/templates/farm2.html">                 
-                <div class="card">
-                    <div class="card-image card2"></div>
-                    <div class="card-text card2">
-                        <span class="date"></span>
-                        <h2>Nông trại 2</h2>
-                        <p>Các thông số của nông trại 2 sẽ hiển thị ở đây</p>
-                    </div>
-                    <div class="card-stats card2">
-                        <div class="stat">
-                            <div class="value" id="temp2">%T%</div>
-                            <div class="type">°C</div>
-                        </div>
-                        <div class="stat border">
-                            <div class="value" id="hum2">%H%</div>
-                            <div class="type">Độ ẩm</div>
-                        </div>
-                        <div class="stat">
-                            <div class="value" id="brightness2">%B%</div>
-                            <div class="type">Độ sáng</div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="/IOT/templates/farm3.html">
-                <div class="card">
-                    <div class="card-image card3"></div>
-                    <div class="card-text card3">
-                        <span class="date"></span>
-                        <h2>Nông trại 3</h2>
-                        <p>Các thông số của nông trại 3 sẽ hiển thị ở đây</p>
-                    </div>
-                    <div class="card-stats card3">
-                        <div class="stat">
-                            <div class="value" id="temp3">%T%</div>
-                            <div class="type">°C</div>
-                        </div>
-                        <div class="stat border">
-                            <div class="value" id="hum3">%H%</div>
-                            <div class="type">Độ ẩm</div>
-                        </div>
-                        <div class="stat">
-                            <div class="value" id="brightness3">%B%</div>
-                            <div class="type">Độ sáng</div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
+      </center>
+      <div class="icon">
+        <a id="icon-active" href="#"
+          ><i class="fas fa-home"></i><span>Trang chủ</span></a
+        >
+        <a href="#"><i class="fas fa-user"></i><span>Người dùng</span></a>
+        <a href="/IOT/templates/setting.html"
+          ><i class="fas fa-sliders-h"></i><span>Cài đặt</span></a
+        >
+      </div>
     </div>
-    <footer>
-
-    </footer>
+    <div class="content">
+      <div class="all-card">
+        <a href="../templates/farm.html">
+          <div class="card">
+            <div class="card-image"></div>
+            <div class="card-text">
+              <span class="date"></span>
+              <h2>Nông trại 1</h2>
+              <p>Các thông số của nông trại 1 sẽ hiển thị ở đây.</p>
+            </div>
+            <div class="card-stats">
+              <div class="stat">
+                <div class="value" id="temp">%T%</div>
+                <div class="type">°C</div>
+              </div>
+              <div class="stat border">
+                <div class="value" id="hum">%H%</div>
+                <div class="type">Độ ẩm</div>
+              </div>
+              <div class="stat">
+                <div class="value" id="brightness">%B%</div>
+                <div class="type">Độ sáng</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="/IOT/templates/farm2.html">
+          <div class="card">
+            <div class="card-image card2"></div>
+            <div class="card-text card2">
+              <span class="date"></span>
+              <h2>Nông trại 2</h2>
+              <p>Các thông số của nông trại 2 sẽ hiển thị ở đây</p>
+            </div>
+            <div class="card-stats card2">
+              <div class="stat">
+                <div class="value" id="temp2">%T%</div>
+                <div class="type">°C</div>
+              </div>
+              <div class="stat border">
+                <div class="value" id="hum2">%H%</div>
+                <div class="type">Độ ẩm</div>
+              </div>
+              <div class="stat">
+                <div class="value" id="brightness2">%B%</div>
+                <div class="type">Độ sáng</div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="/IOT/templates/farm3.html">
+          <div class="card">
+            <div class="card-image card3"></div>
+            <div class="card-text card3">
+              <span class="date"></span>
+              <h2>Nông trại 3</h2>
+              <p>Các thông số của nông trại 3 sẽ hiển thị ở đây</p>
+            </div>
+            <div class="card-stats card3">
+              <div class="stat">
+                <div class="value" id="temp3">%T%</div>
+                <div class="type">°C</div>
+              </div>
+              <div class="stat border">
+                <div class="value" id="hum3">%H%</div>
+                <div class="type">Độ ẩm</div>
+              </div>
+              <div class="stat">
+                <div class="value" id="brightness3">%B%</div>
+                <div class="type">Độ sáng</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <footer></footer>
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
-        <script>
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            const firebaseConfig = {
-            apiKey: "AIzaSyA3k1fnRpoxpTgazwrg245N5riPc7nj6Sw",
-            authDomain: "iot-primary.firebaseapp.com",
-            databaseURL: "https://iot-primary-default-rtdb.firebaseio.com",
-            projectId: "iot-primary",
-            storageBucket: "iot-primary.appspot.com",
-            messagingSenderId: "527853565604",
-            appId: "1:527853565604:web:9e8c3024bd00305be01831",
-            measurementId: "G-S2GXXQB13J"
-          };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            firebase.analytics();
-            
-            //---------------------------------------------------//
-            
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyA3k1fnRpoxpTgazwrg245N5riPc7nj6Sw",
+        authDomain: "iot-primary.firebaseapp.com",
+        databaseURL: "https://iot-primary-default-rtdb.firebaseio.com",
+        projectId: "iot-primary",
+        storageBucket: "iot-primary.appspot.com",
+        messagingSenderId: "527853565604",
+        appId: "1:527853565604:web:9e8c3024bd00305be01831",
+        measurementId: "G-S2GXXQB13J",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
 
+      //---------------------------------------------------//
 
+      //-------------------------------------------//
+      // make sure that the name in ' ' match with name of your database child
+      var brightnes = document.getElementById("brightness");
+      var dbRef = firebase
+        .database()
+        .ref()
+        .child("IOTPrimary/Trang Trại/Cường Độ Sáng");
+      var huminity = document.getElementById("hum");
+      var dbRef2 = firebase
+        .database()
+        .ref()
+        .child("IOTPrimary/Trang Trại/Độ Ẩm");
+      var temparute = document.getElementById("temp");
+      var dbRef3 = firebase
+        .database()
+        .ref()
+        .child("IOTPrimary/Trang Trại/Nhiệt Độ");
+      dbRef.on("value", (snap) => (brightnes.innerText = snap.val()));
+      dbRef2.on("value", (snap) => (huminity.innerText = snap.val()));
+      dbRef3.on("value", (snap) => (temparute.innerText = snap.val()));
 
-
-            //-------------------------------------------//
-            // make sure that the name in ' ' match with name of your database child
-            var brightnes = document.getElementById('brightness');
-            var dbRef = firebase.database().ref().child('IOTPrimary/Trang Trại/Cường Độ Sáng');
-            var huminity = document.getElementById('hum');
-            var dbRef2 = firebase.database().ref().child('IOTPrimary/Trang Trại/Độ Ẩm');
-            var temparute = document.getElementById('temp');
-            var dbRef3 = firebase.database().ref().child('IOTPrimary/Trang Trại/Nhiệt Độ');
-            dbRef.on('value', snap => brightnes.innerText = snap.val());
-            dbRef2.on('value', snap => huminity.innerText = snap.val());
-            dbRef3.on('value', snap => temparute.innerText = snap.val());
-         
-           //farm 2
-            var brightnes2 = document.getElementById('brightness2');
-            var dbRef11 = firebase.database().ref().child('IOTPrimary/Trang Trại/Cường Độ Sáng');
-            var huminity2 = document.getElementById('hum2');
-            var dbRef22 = firebase.database().ref().child('IOTPrimary/Trang Trại/Độ Ẩm');
-            var temparute2 = document.getElementById('temp2');
-            var dbRef33 = firebase.database().ref().child('IOTPrimary/Trang Trại/Nhiệt Độ');
-            dbRef11.on('value', snap => brightnes2.innerText = snap.val());
-            dbRef22.on('value', snap => huminity2.innerText = snap.val());
-            dbRef33.on('value', snap => temparute2.innerText = snap.val());
-            //farm 3
-            var brightnes3 = document.getElementById('brightness3');
-            var dbRef111 = firebase.database().ref().child('IOTPrimary/Trang Trại/Cường Độ Sáng');
-            var huminity3 = document.getElementById('hum3');
-            var dbRef222 = firebase.database().ref().child('IOTPrimary/Trang Trại/Độ Ẩm');
-            var temparute3 = document.getElementById('temp3');
-            var dbRef333 = firebase.database().ref().child('IOTPrimary/Trang Trại/Nhiệt Độ');
-            dbRef111.on('value', snap => brightnes3.innerText = snap.val());
-            dbRef222.on('value', snap => huminity3.innerText = snap.val());
-            dbRef333.on('value', snap => temparute3.innerText = snap.val());
-            // end
-          </script>
-</body>
+      //farm 2
+      var brightnes2 = document.getElementById("brightness2");
+      var dbRef11 = firebase
+        .database()
+        .ref()
+        .child("IOTPrimary/Trang Trại/Cường Độ Sáng");
+      var huminity2 = document.getElementById("hum2");
+      var dbRef22 = firebase
+        .database()
+        .ref()
+        .child("IOTPrimary/Trang Trại/Độ Ẩm");
+      var temparute2 = document.getElementById("temp2");
+      var dbRef33 = firebase
+        .database()
+        .ref()
+        .child("IOTPrimary/Trang Trại/Nhiệt Độ");
+      dbRef11.on("value", (snap) => (brightnes2.innerText = snap.val()));
+      dbRef22.on("value", (snap) => (huminity2.innerText = snap.val()));
+      dbRef33.on("value", (snap) => (temparute2.innerText = snap.val()));
+      //farm 3
+      var brightnes3 = document.getElementById("brightness3");
+      var dbRef111 = firebase
+        .database()
+        .ref()
+        .child("IOTPrimary/Trang Trại/Cường Độ Sáng");
+      var huminity3 = document.getElementById("hum3");
+      var dbRef222 = firebase
+        .database()
+        .ref()
+        .child("IOTPrimary/Trang Trại/Độ Ẩm");
+      var temparute3 = document.getElementById("temp3");
+      var dbRef333 = firebase
+        .database()
+        .ref()
+        .child("IOTPrimary/Trang Trại/Nhiệt Độ");
+      dbRef111.on("value", (snap) => (brightnes3.innerText = snap.val()));
+      dbRef222.on("value", (snap) => (huminity3.innerText = snap.val()));
+      dbRef333.on("value", (snap) => (temparute3.innerText = snap.val()));
+      // end
+    </script>
+  </body>
 </html>
