@@ -14,18 +14,24 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form  class="sign-in-form">
-            <h2 class="title">Đăng nhập</h2>    
+          <form class="sign-in-form">
+            <h2 class="title">Đăng nhập</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Email" id="email_field"/>
+              <input type="text" placeholder="Email" id="email_field" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" id="password_field" />
+              <input
+                type="password"
+                placeholder="Password"
+                id="password_field"
+              />
             </div>
             <button class="btn solid" onclick="login()">Đăng nhập</button>
-            <p class="social-text">Hoặc đăng nhập với tài khoản mạng xã hội dưới đây</p>
+            <p class="social-text">
+              Hoặc đăng nhập với tài khoản mạng xã hội dưới đây
+            </p>
             <div class="social-media">
               <a href="#" class="social-icon">
                 <i class="fab fa-facebook-f"></i>
@@ -41,7 +47,7 @@
               </a>
             </div>
           </form>
-          <form  class="sign-up-form">
+          <form class="sign-up-form">
             <h2 class="title">Đăng kí</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -49,13 +55,17 @@
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" id="email_field"/>
+              <input type="email" placeholder="Email" id="email_field" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" id="password_field"/>
+              <input
+                type="password"
+                placeholder="Password"
+                id="password_field"
+              />
             </div>
-            <button class="btn" onclick="signUp()">Sign up </button>
+            <button class="btn" onclick="signUp()">Sign up</button>
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -81,9 +91,7 @@
             <p>
               Hãy đăng kí ngay để nhận được những tin tức mới nhất từ chúng tôi
             </p>
-            <button class="btn transparent" id="sign-up-btn">
-              Đăng kí
-            </button>
+            <button class="btn transparent" id="sign-up-btn">Đăng kí</button>
           </div>
           <img src="img/log.svg" class="image" alt="" />
         </div>
@@ -94,9 +102,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               laboriosam ad deleniti.
             </p>
-            <button class="btn transparent" id="sign-in-btn">
-              Sign in
-            </button>
+            <button class="btn transparent" id="sign-in-btn">Sign in</button>
           </div>
           <img src="img/register.svg" class="image" alt="" />
         </div>
@@ -105,21 +111,20 @@
 
     <script src="app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
+    <script>
+      // Initialize Firebase
+      var config = {
         apiKey: "AIzaSyA3k1fnRpoxpTgazwrg245N5riPc7nj6Sw",
-            authDomain: "iot-primary.firebaseapp.com",
-            databaseURL: "https://iot-primary-default-rtdb.firebaseio.com",
-            projectId: "iot-primary",
-            storageBucket: "iot-primary.appspot.com",
-            messagingSenderId: "527853565604",
-            appId: "1:527853565604:web:9e8c3024bd00305be01831",
-            measurementId: "G-S2GXXQB13J"
-    };
-    firebase.initializeApp(config);
-  </script>
-  <script src="/IOT/json/account.js"></script>
-   
+        authDomain: "iot-primary.firebaseapp.com",
+        databaseURL: "https://iot-primary-default-rtdb.firebaseio.com",
+        projectId: "iot-primary",
+        storageBucket: "iot-primary.appspot.com",
+        messagingSenderId: "527853565604",
+        appId: "1:527853565604:web:9e8c3024bd00305be01831",
+        measurementId: "G-S2GXXQB13J",
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="/IOT/json/account.js"></script>
   </body>
 </html>

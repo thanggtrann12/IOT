@@ -1,221 +1,225 @@
-<!DOCTYPE HTML><html>
-<!-- Rui Santos - Complete project details at https://RandomNerdTutorials.com
+<!DOCTYPE html>
+<html>
+  <!-- Rui Santos - Complete project details at https://RandomNerdTutorials.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files.
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software. -->
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <link rel="stylesheet" href="/IOT/static/style-sidebar.css">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <title>Smart Faming</title>
-  <style>
-    body {
-      background: url(/IOT/pictures/1.png);
-      background-repeat: repeat;
-      min-width: 310px;
-    	max-width: 800px;
-    	height: 400px;
-      margin: 0 auto;
-    }
-    h2 {
-      font-family: Arial;
-      font-size: 2.5rem;
-      text-align: center;
-    }
-    .buttoncl {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" href="/IOT/static/style-sidebar.css" />
 
-  </style>
-</head>
-<body>
-  <p id="temp" style="display: hidden;"></p>
-<p id="hum" style="text-decoration: none;"></p>
-<p id="brightne" style="text-decoration: none;"></p>
-  <form >
-    <fieldset style="background-color: antiquewhite; border: 2cm;">
-      <legend><b style="color: red; font-size: 60px;font-weight: bold;">Farm 1</b> </legend>
-      <tr>
-        <th>
-        <p id="chart-temperature" class="container"></p>
-      </th>
-      <th>
-        <p id="chart-humidity" class="container"></p>
-      </th>
-      <th>
-        <p id="chart-brightness" class="container"></p>
-      </th>
-      </tr>
-</fieldset>
-</form>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Smart Faming</title>
+    <style>
+      body {
+        background: url(/IOT/pictures/1.png);
+        background-repeat: repeat;
+        min-width: 310px;
+        max-width: 800px;
+        height: 400px;
+        margin: 0 auto;
+      }
+      h2 {
+        font-family: Arial;
+        font-size: 2.5rem;
+        text-align: center;
+      }
+      .buttoncl {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="temp" style="display: hidden"></p>
+    <p id="hum" style="text-decoration: none"></p>
+    <p id="brightne" style="text-decoration: none"></p>
+    <form>
+      <fieldset style="background-color: antiquewhite; border: 2cm">
+        <legend>
+          <b style="color: red; font-size: 60px; font-weight: bold">Farm 1</b>
+        </legend>
+        <tr>
+          <th>
+            <p id="chart-temperature" class="container"></p>
+          </th>
+          <th>
+            <p id="chart-humidity" class="container"></p>
+          </th>
+          <th>
+            <p id="chart-brightness" class="container"></p>
+          </th>
+        </tr>
+      </fieldset>
+    </form>
 
-<footer>
-  <a href="/IOT/templates/sidebar.html" style="shape-outside: margin-box; text-decoration: none; border-style: solid;">Back to Homepage</a>
-</footer>
-</body>
-<script>
-var chartB = new Highcharts.Chart({
-  chart:{ renderTo:'chart-brightness' },
-  title: { text: 'Brightness' },
-  series: [{
-    showInLegend: false,
-    data: []
-  }],
-  plotOptions: {
-    line: { animation: false,
-      dataLabels: { enabled: true }
-    },
-    series: { color: '#18009c' }
-  },
-  xAxis: {
-    type: 'datetime',
-    dateTimeLabelFormats: { second: '%H:%M:%S' }
-  },
-  yAxis: {
-    title: { text: 'Candela (Cd)' }
-  },
-  credits: { enabled: false }
-});
-setInterval(function ( ) {
-  
-  
-   
-      var x = (new Date()).getTime(),
-          y = parseInt(document.getElementById("brightne").innerText);
-       //console.log(this.responseText);
-      if(chartB.series[0].data.length > 40) {
+    <footer>
+      <a
+        href="/IOT/templates/sidebar.html"
+        style="
+          shape-outside: margin-box;
+          text-decoration: none;
+          border-style: solid;
+        "
+        >Back to Homepage</a
+      >
+    </footer>
+  </body>
+  <script>
+    var chartB = new Highcharts.Chart({
+      chart: { renderTo: "chart-brightness" },
+      title: { text: "Brightness" },
+      series: [
+        {
+          showInLegend: false,
+          data: [],
+        },
+      ],
+      plotOptions: {
+        line: { animation: false, dataLabels: { enabled: true } },
+        series: { color: "#18009c" },
+      },
+      xAxis: {
+        type: "datetime",
+        dateTimeLabelFormats: { second: "%H:%M:%S" },
+      },
+      yAxis: {
+        title: { text: "Candela (Cd)" },
+      },
+      credits: { enabled: false },
+    });
+    setInterval(function () {
+      var x = new Date().getTime(),
+        y = parseInt(document.getElementById("brightne").innerText);
+      //console.log(this.responseText);
+      if (chartB.series[0].data.length > 40) {
         chartB.series[0].addPoint([x, y], true, true, true);
       } else {
         chartB.series[0].addPoint([x, y], true, false, true);
       }
- 
-}, 3000 ) ;
-var chartT= new Highcharts.Chart({
-  chart:{ renderTo:'chart-temperature' },
-  title: { text: 'Temperature' },
-  series: [{
-    showInLegend: false,
-    data: []
-  }],
-  plotOptions: {
-    line: { animation: false,
-      dataLabels: { enabled: true }
-    },
-    series: { color: '#18009c' }
-  },
-  xAxis: {
-    type: 'datetime',
-    dateTimeLabelFormats: { second: '%H:%M:%S' }
-  },
-  yAxis: {
-    title: { text: 'Temperature (Celsius)' }
-  },
-  credits: { enabled: false }
-});
-setInterval(function ( ) {
-  
-  
-   
-      var x = (new Date()).getTime(),
-          y = parseInt(document.getElementById("temp").innerText);
-       //console.log(this.responseText);
-      if(chartT.series[0].data.length > 40) {
+    }, 3000);
+    var chartT = new Highcharts.Chart({
+      chart: { renderTo: "chart-temperature" },
+      title: { text: "Temperature" },
+      series: [
+        {
+          showInLegend: false,
+          data: [],
+        },
+      ],
+      plotOptions: {
+        line: { animation: false, dataLabels: { enabled: true } },
+        series: { color: "#18009c" },
+      },
+      xAxis: {
+        type: "datetime",
+        dateTimeLabelFormats: { second: "%H:%M:%S" },
+      },
+      yAxis: {
+        title: { text: "Temperature (Celsius)" },
+      },
+      credits: { enabled: false },
+    });
+    setInterval(function () {
+      var x = new Date().getTime(),
+        y = parseInt(document.getElementById("temp").innerText);
+      //console.log(this.responseText);
+      if (chartT.series[0].data.length > 40) {
         chartT.series[0].addPoint([x, y], true, true, true);
       } else {
         chartT.series[0].addPoint([x, y], true, false, true);
       }
- 
-}, 3000 ) ;
-var chartH= new Highcharts.Chart({
-  chart:{ renderTo:'chart-humidity' },
-  title: { text: 'Humidity' },
-  series: [{
-    showInLegend: false,
-    data: []
-  }],
-  plotOptions: {
-    line: { animation: false,
-      dataLabels: { enabled: true }
-    },
-    series: { color: '#18009c' }
-  },
-  xAxis: {
-    type: 'datetime',
-    dateTimeLabelFormats: { second: '%H:%M:%S' }
-  },
-  yAxis: {
-    title: { text: 'Humidity (%)' }
-  },
-  credits: { enabled: false }
-});
-setInterval(function ( ) {
-  
-  
-   
-      var x = (new Date()).getTime(),
-          y = parseInt(document.getElementById("hum").innerText);
-       //console.log(this.responseText);
-      if(chartH.series[0].data.length > 40) {
+    }, 3000);
+    var chartH = new Highcharts.Chart({
+      chart: { renderTo: "chart-humidity" },
+      title: { text: "Humidity" },
+      series: [
+        {
+          showInLegend: false,
+          data: [],
+        },
+      ],
+      plotOptions: {
+        line: { animation: false, dataLabels: { enabled: true } },
+        series: { color: "#18009c" },
+      },
+      xAxis: {
+        type: "datetime",
+        dateTimeLabelFormats: { second: "%H:%M:%S" },
+      },
+      yAxis: {
+        title: { text: "Humidity (%)" },
+      },
+      credits: { enabled: false },
+    });
+    setInterval(function () {
+      var x = new Date().getTime(),
+        y = parseInt(document.getElementById("hum").innerText);
+      //console.log(this.responseText);
+      if (chartH.series[0].data.length > 40) {
         chartH.series[0].addPoint([x, y], true, true, true);
       } else {
         chartH.series[0].addPoint([x, y], true, false, true);
       }
- 
-}, 3000 ) ;
-</script>
+    }, 3000);
+  </script>
 
-
-
-
-<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
-        <script>
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            const firebaseConfig = {
-            apiKey: "AIzaSyA3k1fnRpoxpTgazwrg245N5riPc7nj6Sw",
-            authDomain: "iot-primary.firebaseapp.com",
-            databaseURL: "https://iot-primary-default-rtdb.firebaseio.com",
-            projectId: "iot-primary",
-            storageBucket: "iot-primary.appspot.com",
-            messagingSenderId: "527853565604",
-            appId: "1:527853565604:web:9e8c3024bd00305be01831",
-            measurementId: "G-S2GXXQB13J"
-          };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            firebase.analytics();
-            
-            //functions
-            // make sure that the name in ' ' match with name of your database child
-            
-            var temparute = document.getElementById('temp');
-            var dbRef = firebase.database().ref().child('IOTPrimary/Trang Trại/Nhiệt Độ');
-            dbRef.on('value', snap => temparute.innerText = snap.val());
-            
-            var brightnes = document.getElementById('brightne');
-            var dbRef2 = firebase.database().ref().child('IOTPrimary/Trang Trại/Cường Độ Sáng');
-            dbRef2.on('value', snap => brightnes.innerText = snap.val());
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyA3k1fnRpoxpTgazwrg245N5riPc7nj6Sw",
+      authDomain: "iot-primary.firebaseapp.com",
+      databaseURL: "https://iot-primary-default-rtdb.firebaseio.com",
+      projectId: "iot-primary",
+      storageBucket: "iot-primary.appspot.com",
+      messagingSenderId: "527853565604",
+      appId: "1:527853565604:web:9e8c3024bd00305be01831",
+      measurementId: "G-S2GXXQB13J",
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
 
-            var humidity = document.getElementById('hum');
-            var dbRef3 = firebase.database().ref().child('IOTPrimary/Trang Trại/Độ Ẩm');
-            dbRef3.on('value', snap => humidity.innerText = snap.val());
-          
-            // end
-          </script>
+    //functions
+    // make sure that the name in ' ' match with name of your database child
+
+    var temparute = document.getElementById("temp");
+    var dbRef = firebase
+      .database()
+      .ref()
+      .child("IOTPrimary/Trang Trại/Nhiệt Độ");
+    dbRef.on("value", (snap) => (temparute.innerText = snap.val()));
+
+    var brightnes = document.getElementById("brightne");
+    var dbRef2 = firebase
+      .database()
+      .ref()
+      .child("IOTPrimary/Trang Trại/Cường Độ Sáng");
+    dbRef2.on("value", (snap) => (brightnes.innerText = snap.val()));
+
+    var humidity = document.getElementById("hum");
+    var dbRef3 = firebase.database().ref().child("IOTPrimary/Trang Trại/Độ Ẩm");
+    dbRef3.on("value", (snap) => (humidity.innerText = snap.val()));
+
+    // end
+  </script>
 </html>
