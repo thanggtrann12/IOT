@@ -10,7 +10,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link rel="icon" href="/IOT/pictures/farm.png">
 
     <style>
       html {
@@ -286,10 +285,10 @@
       function toggleCheckbox(element) {
        var state;
         if (element.checked) {
-          firebase.database().ref("Device : " + element.id).set({state: 'On'});
+          firebase.database().ref("Device : " + (element.id).toString()).set({state: 'On'});
         }
          else 
-         firebase.database().ref("Device : " + element.id).set({
+         firebase.database().ref("Device : " + (element.id).toString()).set({
             state: 'Off'});
          
       }
