@@ -45,33 +45,29 @@
 //   firebase.auth().signOut();
 // }
 // function signUp(){
-		
+
 //   var email = document.getElementById("email");
 //   var password = document.getElementById("password");
-  
+
 //   firebase.auth().createUserWithEmailAndPassword(email.value, password.value);
-  
+
 //   alert("Signed Up");
 // }
 
 var user = ['thanggtrann12'];
-          var pass = ['0393807319'];
-            function login()
-                {
-                for (var i = 0; i<user.length;i++)
-                if (user[i] == document.getElementById("username").value && pass[i] == document.getElementById("password").value) 
-                 {
-                  window.location.href = "/IOT/templates/sidebar.html";
-                
-                 }
-               else 
-                {
-                 alert("Your account incorrect");                      
-                }
-          }
-          function signup()
-          {
-              user.push(document.getElementById("username").value);
-              pass.push(document.getElementById("password").value);
-             
-          }
+var pass = ['0393807319'];
+function login() {
+  for (var i = 0; i < user.length; i++)
+    if (user[i] == document.getElementById("username").value && pass[i] == document.getElementById("password").value) {
+      window.location.href = "/IOT/templates/sidebar.html";
+
+    }
+    else {
+      alert("Your account incorrect");
+    }
+}
+function signup() {
+  user.push(document.getElementById("username").value);
+  pass.push(document.getElementById("password").value);
+
+}
