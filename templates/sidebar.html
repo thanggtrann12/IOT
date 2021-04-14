@@ -141,10 +141,7 @@
             firebase.analytics();
             
             //---------------------------------------------------//
-            var sliervalue;
-            firebase.database().ref('slider 1: value/').set({
-                sliervalue: dbRef
-            });
+            
 
 
 
@@ -160,7 +157,10 @@
             dbRef.on('value', snap => brightnes.innerText = snap.val());
             dbRef2.on('value', snap => huminity.innerText = snap.val());
             dbRef3.on('value', snap => temparute.innerText = snap.val());
-           
+            var sliervalue;
+            firebase.database().ref('slider 1: value/').set({
+                sliervalue: dbRef
+            });
            //farm 2
             var brightnes2 = document.getElementById('brightness2');
             var dbRef11 = firebase.database().ref().child('IOTPrimary/Trang Trại/Cường Độ Sáng');
