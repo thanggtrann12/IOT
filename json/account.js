@@ -5,6 +5,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("user_div").style.display = "block";
     document.getElementById("login_div").style.display = "none";
     window.location.href="/IOT/templates/sidebar.html"
+    window.location.assign="/IOT/templates/sidebar.html"
     var user = firebase.auth().currentUser;
 
     if(user != null){
@@ -52,3 +53,25 @@ function signUp(){
   
   alert("Signed Up");
 }
+
+var user = ['thanggtrann12'];
+          var pass = ['0393807319'];
+            function login()
+                {
+                for (var i = 0; i<user.length;i++)
+                if (user[i] == document.getElementById("username").value && pass[i] == document.getElementById("password").value) 
+                 {
+                  window.location.href = "/IOT/templates/sidebar.html";
+                
+                 }
+               else 
+                {
+                 alert("Your account incorrect");                      
+                }
+          }
+          function signup()
+          {
+              user.push(document.getElementById("username").value);
+              pass.push(document.getElementById("password").value);
+             
+          }
