@@ -293,10 +293,13 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
       function toggleCheckbox(element) {
-       
+       var state;
         if (element.checked) {
-          firebase.database().ref("Device : " + element.id).set({'on'});
-         else firebase.database().ref("Device : " + element.id).set({'off'});
+          firebase.database().ref("Device : " + element.id).set({state: 'On'});
+        }
+         else 
+         firebase.database().ref("Device : " + element.id).set({
+            state: 'Off'});
          
       }
       function updateSliderPWM(element) {
@@ -330,11 +333,7 @@
     <footer>
       <br />
       <br />
-      <a href="/IOT/templates/sidebar.html" style="text-decoration: none"
-        ><b style="color: #b30000; font-size: larger; text-align: right"
-          >Back To HomePage</b
-        ></a
-      >
+      <a href="/IOT/templates/sidebar.html" style="text-decoration: none" ><b style="color: #b30000; font-size: larger; text-align: right">Back To HomePage</b></a>
     </footer>
   </body>
 </html>
