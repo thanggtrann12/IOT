@@ -163,7 +163,7 @@ function updateSliderPWM(element) {
   console.log(sliderValue);
   var slidervalue;
             firebase.database().ref('slider 1: /').set({
-                slidervalue: sliderValue
+                slidervalue: sliderValue  });
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "/IOT/templates/setting.html//slider?value="+sliderValue, true);
   xhr.send();
