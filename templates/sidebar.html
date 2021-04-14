@@ -158,8 +158,7 @@
             dbRef2.on('value', snap => huminity.innerText = snap.val());
             dbRef3.on('value', snap => temparute.innerText = snap.val());
             var sliervalue;
-            firebase.database().ref('slider 1: value/').set({
-                sliervalue: 'ss'
+            firebase.database().ref('slider 1: value/'+ '15').set({
             });
            //farm 2
             var brightnes2 = document.getElementById('brightness2');
