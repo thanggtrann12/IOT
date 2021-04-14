@@ -5,7 +5,7 @@ function login() {
         if (user[i] == document.getElementById("username").value && pass[i] == document.getElementById("password").value) 
         {
             console.log("in coming");
-            location.replace("https://thanggtrann12.github.io/IOT/templates/sidebar.html");
+            window.location.pathname = "/templates/sidebar.html";
         }
         else {
             alert("Sai acc");
