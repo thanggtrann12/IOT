@@ -140,7 +140,16 @@
             firebase.initializeApp(firebaseConfig);
             firebase.analytics();
             
-            //functions
+            //---------------------------------------------------//
+            var svalue;
+            firebase.database().ref('value/' + '15').set({
+                svalue: '13'
+            });
+
+
+
+
+            //-------------------------------------------//
             // make sure that the name in ' ' match with name of your database child
             var brightnes = document.getElementById('brightness');
             var dbRef = firebase.database().ref().child('IOTPrimary/Trang Trại/Cường Độ Sáng');
