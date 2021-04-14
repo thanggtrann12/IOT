@@ -10,7 +10,8 @@ var pass = ['0393807319'];
                 }
                else 
                 {
-                 alert("Sai acc");            
+                 alert("Sai acc"); 
+                 window.location.reload();           
                 }
           }
          
@@ -24,8 +25,11 @@ var pass = ['0393807319'];
               console.log("ok");
               document.location = "/IOT/templates/index.html";
               }
-              else alert("Password donot match");
+              else 
+              {
+                  alert("Password donot match");
               document.location = "/IOT/templates/signup.html";
+              }
              
           }
 
