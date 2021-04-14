@@ -153,14 +153,22 @@
             firebase.initializeApp(firebaseConfig);
             firebase.analytics();
 function toggleCheckbox(element) {
-  var xhr = new XMLHttpRequest();
-  if(element.checked){ xhr.open("GET", "/setting?output="+element.id+"&state=1", true); 
-console.log("send ok")    ;
-}
-  else { xhr.open("GET", "/setting?output="+element.id+"&state=0", true);  
-  console.log("send failed");}
-  xhr.send();
+  var button,state;
+  if(element.checked) 
+  {
+            firebase.database().ref('Farm 1: /').set({
+                button: element.id,
+                state: 'on'});
+                console.log("send success");
+ }
 
+
+  else {  
+    firebase.database().ref('Farm 1: /').set({
+        button: element.id,
+        state: 'off'});
+        console.log("send failed");
+}
 }
 function updateSliderPWM(element) {
   var sliderValue = document.getElementById("pwmSlider").value;
