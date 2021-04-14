@@ -7,8 +7,7 @@ var pass = ['0393807319'];
                  {
                   console.log("in coming");
                   alert("Your account correct"); 
-                    window.location = "/IOT/templates/sidebar.html";
-                    return false;
+                  return res.redirect('/IOT/templates/sidebar.html');
                 }
                else 
                 {
