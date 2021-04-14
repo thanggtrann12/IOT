@@ -1,5 +1,5 @@
 
-
+location.href = "https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js";
  const firebaseConfig = {
  apiKey: "AIzaSyA3k1fnRpoxpTgazwrg245N5riPc7nj6Sw",
  authDomain: "iot-primary.firebaseapp.com",
