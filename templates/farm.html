@@ -6,85 +6,100 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files.
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software. -->
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <link rel="stylesheet" href="/IOT/static/style-sidebar.css">
-   <link rel="stylesheet" href="/IOT/static/farm.css">
-   <script src="/IOT/json/farm.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <title>Smart Faming</title>
-  
-</head>
-<body>
-  <p id="temp" style="display: hidden;"></p>
-<p id="hum" style="text-decoration: none;"></p>
-<p id="brightne" style="text-decoration: none;"></p>
-  <form >
-    <fieldset style="background-color: antiquewhite; border: 2cm;">
-      <legend><b style="color: red; font-size: 60px;font-weight: bold;">Farm 1</b> </legend>
-      <tr>
-        <th>
-        <p id="chart-temperature" class="container"></p>
-      </th>
-      <th>
-        <p id="chart-humidity" class="container"></p>
-      </th>
-      <th>
-        <p id="chart-brightness" class="container"></p>
-      </th>
-      </tr>
-</fieldset>
-</form>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" href="/IOT/static/style-sidebar.css" />
+    <link rel="stylesheet" href="/IOT/static/farm.css" />
+    <script src="/IOT/json/farm.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Smart Faming</title>
+  </head>
+  <body>
+    <p id="temp" style="display: hidden"></p>
+    <p id="hum" style="text-decoration: none"></p>
+    <p id="brightne" style="text-decoration: none"></p>
+    <form>
+      <fieldset style="background-color: antiquewhite; border: 2cm">
+        <legend>
+          <b style="color: red; font-size: 60px; font-weight: bold">Farm 1</b>
+        </legend>
+        <tr>
+          <th>
+            <p id="chart-temperature" class="container"></p>
+          </th>
+          <th>
+            <p id="chart-humidity" class="container"></p>
+          </th>
+          <th>
+            <p id="chart-brightness" class="container"></p>
+          </th>
+        </tr>
+      </fieldset>
+    </form>
 
-<footer>
-  <a href="/IOT/templates/sidebar.html" style="shape-outside: margin-box; text-decoration: none; border-style: solid;">Back to Homepage</a>
-</footer>
-</body>
+    <footer>
+      <a
+        href="/IOT/templates/sidebar.html"
+        style="
+          shape-outside: margin-box;
+          text-decoration: none;
+          border-style: solid;
+        "
+        >Back to Homepage</a
+      >
+    </footer>
 
-  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
-  <!-- TODO: Add SDKs for Firebase products that you want to use
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
-  <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyA3k1fnRpoxpTgazwrg245N5riPc7nj6Sw",
-      authDomain: "iot-primary.firebaseapp.com",
-      databaseURL: "https://iot-primary-default-rtdb.firebaseio.com",
-      projectId: "iot-primary",
-      storageBucket: "iot-primary.appspot.com",
-      messagingSenderId: "527853565604",
-      appId: "1:527853565604:web:9e8c3024bd00305be01831",
-      measurementId: "G-S2GXXQB13J",
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyA3k1fnRpoxpTgazwrg245N5riPc7nj6Sw",
+        authDomain: "iot-primary.firebaseapp.com",
+        databaseURL: "https://iot-primary-default-rtdb.firebaseio.com",
+        projectId: "iot-primary",
+        storageBucket: "iot-primary.appspot.com",
+        messagingSenderId: "527853565604",
+        appId: "1:527853565604:web:9e8c3024bd00305be01831",
+        measurementId: "G-S2GXXQB13J",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
 
-    //functions
-    // make sure that the name in ' ' match with name of your database child
+      //functions
+      // make sure that the name in ' ' match with name of your database child
 
-    var temparute = document.getElementById("temp");
-    var dbRef = firebase
-      .database()
-      .ref()
-      .child("IOTPrimary/Trang Trại/Nhiệt Độ");
-    dbRef.on("value", (snap) => (temparute.innerText = snap.val()));
+      var temparute = document.getElementById("temp");
+      var dbRef = firebase
+        .database()
+        .ref()
+        .child("IOTPrimary/Trang Trại/Nhiệt Độ");
+      dbRef.on("value", (snap) => (temparute.innerText = snap.val()));
 
-    var brightnes = document.getElementById("brightne");
-    var dbRef2 = firebase
-      .database()
-      .ref()
-      .child("IOTPrimary/Trang Trại/Cường Độ Sáng");
-    dbRef2.on("value", (snap) => (brightnes.innerText = snap.val()));
+      var brightnes = document.getElementById("brightne");
+      var dbRef2 = firebase
+        .database()
+        .ref()
+        .child("IOTPrimary/Trang Trại/Cường Độ Sáng");
+      dbRef2.on("value", (snap) => (brightnes.innerText = snap.val()));
 
-    var humidity = document.getElementById("hum");
-    var dbRef3 = firebase.database().ref().child("IOTPrimary/Trang Trại/Độ Ẩm");
-    dbRef3.on("value", (snap) => (humidity.innerText = snap.val()));
+      var humidity = document.getElementById("hum");
+      var dbRef3 = firebase
+        .database()
+        .ref()
+        .child("IOTPrimary/Trang Trại/Độ Ẩm");
+      dbRef3.on("value", (snap) => (humidity.innerText = snap.val()));
 
-    // end
-  </script>
+      // end
+    </script>
+  </body>
 </html>
