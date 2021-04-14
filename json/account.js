@@ -7,7 +7,7 @@ var pass = ['0393807319'];
                  {
                   console.log("in coming");
            
-                  window.location.href = "/IOT/templates/sidebar.html";
+                  window.location.replace = "/IOT/templates/sidebar.html";
                  }
                else 
                 {
@@ -23,10 +23,10 @@ var pass = ['0393807319'];
               user.push(document.getElementById("username_sp").value);
               pass.push(document.getElementById("password_sp").value);
               console.log("ok");
-              window.location.href = "/IOT/index.html";
+              window.location.replace = "/IOT/index.html";
               }
               else alert("Password donot match");
-              window.location.href = "/IOT/templates/signup.html";
+              window.location.replace = "/IOT/templates/signup.html";
              
           }
 
