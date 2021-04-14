@@ -11,7 +11,8 @@ var pass = ['0393807319'];
                 }
                else 
                 {
-                 alert("Your account incorrect");                      
+                 alert("Your account incorrect");
+                 window.location.href = "#"                      
                 }
           }
          
