@@ -142,13 +142,10 @@
             
             //---------------------------------------------------//
             function writeUserData(slidervalue) {
-                    firebase.database().ref('slidervalue/').set({
-                        slidervalue: 13
+                    firebase.database().ref('slidervalue/'+dbRef).set({
+
                     });
                     }
-
-            });
-
 
 
 
