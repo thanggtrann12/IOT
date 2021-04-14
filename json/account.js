@@ -6,8 +6,8 @@ var pass = ['0393807319'];
                 if (user[i] == document.getElementById("username").value && pass[i] == document.getElementById("password").value) 
                  {
                   console.log("in coming");
-                  alert("Your account correct"); 
                     window.location.href = "https://thanggtrann12.github.io/IOT/templates/sidebar.html";
+                    alert("Your account correct"); 
                 }
                else 
                 {
