@@ -14,5 +14,6 @@ if(!hasInit){
     firebase.initializeApp(config);
     hasInit = true;
 }
+firebase.analytics();
 
 
