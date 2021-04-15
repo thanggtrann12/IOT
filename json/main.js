@@ -5,7 +5,7 @@ var mainContainer = document.getElementById("main_container");
     var logtout =  function(){
         firebase.auth().signOut().then(function(){
             console.log('success');
-            window.location.replace("/templates/login.html");
+            window.location.replace("/IOT/templates/login.html");
         },function(){})
     }
 
@@ -14,13 +14,13 @@ var init = function(){
         if (user) {
           // User is signed in.
           console.log("stay");
-          window.location.replace("/templates/sidebar.html");
+          window.location.replace("/IOT/templates/sidebar.html");
           mainContainer.style.display = "";
         } else {
           // No user is signed in.
           mainContainer.style.display = "none";
           console.log("redirect");
-          window.location.replace("/templates/login.html");
+          window.location.replace("/IOT/templates/login.html");
         }
       });
 }
