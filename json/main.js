@@ -27,5 +27,5 @@ var init = function(){
     
 init();
 
-mainApp.logout = logtout;
+mainApp.logout() = logtout;
 })();
