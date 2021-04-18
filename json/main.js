@@ -28,4 +28,7 @@ var init = function(){
 init();
 
 mainApp.logout = logtout;
+document.getElementById("logout_btn").addEventListener("click", function(){
+  mainApp.logout();
+})
 })();
