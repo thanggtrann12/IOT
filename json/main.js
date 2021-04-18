@@ -14,7 +14,7 @@ var init = function(){
         if (user) {
           // User is signed in.
           console.log("stay");
-          window.location.replace("/IOT/templates/sidebar.html");
+          //window.location.replace("/IOT/templates/sidebar.html");
           mainContainer.style.display = "";
         } else {
           // No user is signed in.
