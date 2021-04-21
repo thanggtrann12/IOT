@@ -10,7 +10,8 @@ copies or substantial portions of the Software. -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <link rel="stylesheet" href="/IOT/static/style-sidebar.css" />
-    <link rel="icon" href="/IOT/pictures/farm.png">
+    <link rel="stylesheet" href="/IOT/static/farm.css">
+    <link rel="icon" href="/IOT/pictures/farm.png" />
 
     <link
       rel="stylesheet"
@@ -45,9 +46,6 @@ copies or substantial portions of the Software. -->
     </style>
   </head>
   <body>
-    <p id="temp" style="visibility: hidden;"></p>
-    <p id="hum" style="visibility: hidden;"></p>
-    <p id="brightne" style="visibility: hidden;"></p>
     <form>
       <fieldset style="background-color: antiquewhite; border: 2cm">
         <legend>
@@ -55,12 +53,15 @@ copies or substantial portions of the Software. -->
         </legend>
         <tr>
           <th>
+            <p id="temp"></p>
             <p id="chart-temperature" class="container"></p>
           </th>
           <th>
+            <p id="hum"></p>
             <p id="chart-humidity" class="container"></p>
           </th>
           <th>
+            <p id="brightne"></p>
             <p id="chart-brightness" class="container"></p>
           </th>
         </tr>
