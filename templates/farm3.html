@@ -84,6 +84,9 @@ copies or substantial portions of the Software. -->
     var chartB = new Highcharts.Chart({
       chart: { renderTo: "chart-brightness" },
       title: { text: "Brightness" },
+      time: {
+            useUTC: false
+        },
       series: [
         {
           showInLegend: false,
@@ -116,6 +119,9 @@ copies or substantial portions of the Software. -->
     var chartT = new Highcharts.Chart({
       chart: { renderTo: "chart-temperature" },
       title: { text: "Temperature" },
+      time: {
+            useUTC: false
+        },
       series: [
         {
           showInLegend: false,
@@ -148,6 +154,9 @@ copies or substantial portions of the Software. -->
     var chartH = new Highcharts.Chart({
       chart: { renderTo: "chart-humidity" },
       title: { text: "Humidity" },
+      time: {
+            useUTC: false
+        },
       series: [
         {
           showInLegend: false,
