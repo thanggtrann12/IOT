@@ -13,7 +13,7 @@ var config = {
 if(!hasInit){
     firebase.initializeApp(config);
     hasInit = true;
-    firebase.analytics();
+    //firebase.analytics();
 }
 
 
