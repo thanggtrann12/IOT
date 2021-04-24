@@ -1,15 +1,15 @@
-var mainApp = {};
-(function(){
-var mainContainer = document.getElementById("main_container");
 
-    var logtout =  function(){
+
+    function logout()
+    {
         firebase.auth().signOut().then(function(){
             console.log('success');
             window.location.replace("/IOT/templates/login.html");
-        },function(){})
+        })
     }
 
-var init = function(){
+ function init()
+{
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
           // User is signed in.
@@ -27,9 +27,4 @@ var init = function(){
     
 init();
 
-mainApp.logout = logtout();
-document.getElementById("logout_btn").addEventListener("click", function(){
-  console.log("sssss");
-  mainApp.logout;
-})
-});
+
