@@ -1,7 +1,5 @@
 var mainApp = {};
 (function(){
-var mainContainer = document.getElementById("main_container");
-
     var logtout =  function(){
         firebase.auth().signOut().then(function(){
             console.log('success');
