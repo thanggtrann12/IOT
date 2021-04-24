@@ -18,7 +18,7 @@
           
         } else {
           // No user is signed in.
-          mainContainer.style.display = "none";
+        
           console.log("redirect");
           window.location.replace("/IOT/templates/login.html");
         }
