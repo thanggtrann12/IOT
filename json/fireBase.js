@@ -15,6 +15,5 @@ if(!hasInit){
     hasInit = true;
    
 }
-firebase.analytics();
 
 
