@@ -1,5 +1,7 @@
 var mainApp = {};
 (function(){
+var mainContainer = document.getElementById("main_container");
+
     var logtout =  function(){
         firebase.auth().signOut().then(function(){
             console.log('success');
@@ -11,7 +13,7 @@ var init = function(){
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
           // User is signed in.
-          console.log(user);
+          console.log("stay");
           //window.location.replace("/IOT/templates/sidebar.html");
           
         } else {
