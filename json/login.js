@@ -11,7 +11,7 @@ var uiConfig = {
           //firebase.auth.PhoneAuthProvider.PROVIDER_ID
   ],
   // Terms of service url.
-  tosUrl: 'https://thanggtrann12.github.io/IOT/index.html'
+  tosUrl: 'IOT/index.html'
 };
 
 // Initialize the FirebaseUI Widget using Firebase.
