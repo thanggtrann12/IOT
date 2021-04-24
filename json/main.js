@@ -11,7 +11,7 @@ var init = function(){
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
           // User is signed in.
-          console.log("stay");
+          console.log(user);
           //window.location.replace("/IOT/templates/sidebar.html");
           
         } else {
